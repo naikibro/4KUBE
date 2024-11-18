@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+  labels:
+    app: hello-pod
+spec:
+  containers:
+    - name: hello-container
+      image: registry.k8s.io/echoserver:1.5
+      ports:
+        - containerPort: 8080
+# It dont work on mac
